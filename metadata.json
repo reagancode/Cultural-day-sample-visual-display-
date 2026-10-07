@@ -1,0 +1,6 @@
+{
+  "name": "Uganda Independence Cultural Display & Geometric Mural",
+  "description": "An animated, responsive cultural visual display inspired by authentic African geometric mural art, traditional Kikoi weaves, and heritage motifs for Uganda Independence Day.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+@keyframes tasselSway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmerHatch {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 40;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(245, 183, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(214, 52, 52, 0.8));
+  }
+}
+
+@keyframes drumBeatBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.035);
+  }
+  30% {
+    transform: scale(0.99);
+  }
+}
+
+.animate-tassel-1 {
+  transform-origin: top center;
+  animation: tasselSway 2.8s ease-in-out infinite;
+}
+
+.animate-tassel-2 {
+  transform-origin: top center;
+  animation: tasselSway 3.4s ease-in-out 0.4s infinite reverse;
+}
+
+.animate-slow-rotate {
+  transform-origin: center;
+  animation: slowRotate 45s linear infinite;
+}
+
+.animate-shimmer-hatch {
+  stroke-dasharray: 6 3;
+  animation: shimmerHatch 4s linear infinite;
+}
+
+.animate-drum-beat {
+  transform-origin: center;
+  animation: drumBeatBounce 0.85s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
